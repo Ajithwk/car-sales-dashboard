@@ -1,0 +1,10 @@
+[
+  {"company": "Honda", "model": "Accord", "year": 2021, "price": 24000, "date_of_sale": "2021-07-20"},
+  {"company": "Toyota", "model": "Corolla", "year": 2022, "price": 21000, "date_of_sale": "2022-06-10"},
+  {"company": "Honda", "model": "Civic", "year": 2022, "price": 23000, "date_of_sale": "2022-08-05"},
+  {"company": "Toyota", "model": "RAV4", "year": 2023, "price": 27000, "date_of_sale": "2023-09-01"},
+  {"company": "Honda", "model": "CR-V", "year": 2025, "price": 29000, "date_of_sale": "2025-01-11"},
+  {"company": "Toyota", "model": "Highlander", "year": 2025, "price": 33000, "date_of_sale": "2025-04-01"},
+  {"company": "Honda", "model": "Pilot", "year": 2024, "price": 35000, "date_of_sale": "2024-11-23"}
+ 
+]

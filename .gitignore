@@ -1,0 +1,22 @@
+# Python - Backend
+backend/__pycache__/
+backend/*.py[cod]
+backend/venv/
+backend/.env
+backend/tasks.db
+
+# Node - Frontend
+frontend/node_modules/
+frontend/dist/
+frontend/.env
+frontend/.env.*
+
+# Vite specific
+frontend/.vite/
+
+# System files
+.DS_Store
+
+# IDEs
+.vscode/
+.idea/
