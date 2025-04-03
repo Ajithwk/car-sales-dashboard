@@ -84,7 +84,7 @@ def process_task(task_id: int, task_data: TaskCreate):
                         }
                         records.append(record)
             except Exception as e:
-                print(f"[❌ Error fetching Source C]: {e}")
+                print(f"[Error fetching Source C]: {e}")
 
         # Save all records to DB
         for row in records:
@@ -97,12 +97,12 @@ def process_task(task_id: int, task_data: TaskCreate):
                 date_of_sale=datetime.strptime(row["date_of_sale"], "%Y-%m-%d").date(),
             )
             db.add(record)
-        print(f"[✅ Saved {len(records)} records to DB for task {task.id}]")
+        print(f"[Saved {len(records)} records to DB for task {task.id}]")
         task.status = "completed"
         db.commit()
 
     except Exception as e:
-        print(f"[❌ Task {task_id} Error]:", e)
+        print(f"[Task {task_id} Error]:", e)
 
     finally:
         db.close()

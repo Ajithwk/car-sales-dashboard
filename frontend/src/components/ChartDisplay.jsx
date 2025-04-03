@@ -21,10 +21,10 @@ export default function ChartDisplay({ data }) {
 
   const filtered = data.filter((d) => {
     return (
-      (selectedYear === "All" || d.year === selectedYear) &&
+      (selectedYear === "All" || d.year === Number(selectedYear)) &&
       (selectedCompany === "All" || d.company === selectedCompany)
     );
-  });
+  });  
 
   const salesPerYear = Object.values(
     filtered.reduce((acc, row) => {
@@ -47,7 +47,7 @@ export default function ChartDisplay({ data }) {
 
   return (
     <div className="mt-6 text-white">
-      <h2 className="text-2xl font-bold mb-4">📊 Sales Over Years</h2>
+      <h2 className="text-2xl font-bold mb-4">Sales Over Years</h2>
 
       <div className="mb-6 flex gap-6">
         <div>
@@ -127,7 +127,7 @@ export default function ChartDisplay({ data }) {
       </div>
 
       {/* Bar Chart */}
-      <h2 className="text-2xl font-bold mb-4">🧱 Sales by Company</h2>
+      <h2 className="text-2xl font-bold mb-4">Sales by Company</h2>
       <div className="bg-gray-800 rounded-md shadow-md p-4">
         <ResponsiveContainer width="100%" height={300}>
           <BarChart data={salesPerCompany}>

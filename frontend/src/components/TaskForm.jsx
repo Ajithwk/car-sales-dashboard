@@ -12,9 +12,9 @@ export default function TaskForm({ onTaskCreated }) {
     try {
       const response = await axios.post("http://127.0.0.1:8000/tasks", {
         source,
-        start_year: parseInt(startYear),
-        end_year: parseInt(endYear),
-        filter_company: source === "B" ? filterCompany : undefined, // Only include company for Source B
+        start_year: parseInt(startYear, 10),  // base 10 for safety
+        end_year: parseInt(endYear, 10),
+        filter_company: source === "B" ? filterCompany : undefined, 
       });
       onTaskCreated(response.data.task_id);
     } catch (error) {
@@ -22,6 +22,7 @@ export default function TaskForm({ onTaskCreated }) {
       alert("Failed to create task!");
     }
   };
+  
 
   return (
     <form onSubmit={handleSubmit} className="mb-4">

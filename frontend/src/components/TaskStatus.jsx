@@ -11,12 +11,15 @@ export default function TaskStatus({ taskId, onStatusChange, onComplete }) {
         setStatus(res.data.status);
         onStatusChange(res.data.status);
 
-        if (res.data.status === 'completed') {
+        if (res.data.status === "completed") {
           clearInterval(interval);
-
+        
           const result = await axios.get(`http://127.0.0.1:8000/tasks/${taskId}/data`);
+          console.log("✅ Final processed data:", result.data); // <- ADD THIS
+        
           onComplete(result.data);
         }
+        
       } catch (err) {
         console.error('Error checking task status:', err);
         clearInterval(interval);
