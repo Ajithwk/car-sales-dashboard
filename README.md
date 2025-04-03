@@ -212,7 +212,6 @@ All endpoints are served from [http://127.0.0.1:8000](http://127.0.0.1:8000)
     "price": 22000,
     "date_of_sale": "2023-05-01"
   },
-  ...
 ]
 ```
 
@@ -228,7 +227,7 @@ This section of the app displays dynamic, interactive charts for sales data:
 - Responsive layout for clean viewing on any screen size
 
 🖼️  
-![Dashboard View](screenshots/dashboard.png)
+![Dashboard View](screenshots/Dashboard.png)
 
 ---
 
